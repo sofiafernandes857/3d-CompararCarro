@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparar carros em 3D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container"></div>
+    <div id="loading">Carregando...</div>
+
+    <div class="dropdown-container">
+        <div class="dropdown">
+          <button class="dropbtn">Peças</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="showPopup('pneu')">Pneu</a>
+            <a href="#" onclick="showPopup('motor')">Motor</a>
+            <a href="#" onclick="showPopup('chassi')">Chassi</a>
+          </div>
+        </div>
+    
+        <div class="dropdown">
+          <button class="dropbtn">Principais Diferenças</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="showPopup('velocidade')">Velocidade</a>
+            <a href="#" onclick="showPopup('comprimento')">Comprimento</a>
+            <a href="#" onclick="showPopup('potencia')">Potência</a>
+            <a href="#" onclick="showPopup('peso')">Peso</a>
+            <a href="#" onclick="showPopup('eficiencia')">Eficiência</a>
+          </div>
+        </div>
+    
+        <div class="dropdown">
+          <button class="dropbtn">Diferenciais FE</button>
+          <div class="dropdown-content">
+            <a href="#" onclick="showPopup('bateria')">Bateria</a>
+            <a href="#" onclick="showPopup('software')">Software</a>
+            <a href="#" onclick="showPopup('performance')">Performance</a>
+            <a href="#" onclick="showPopup('padronizacao')">Padronizacao</a>
+            <a href="#" onclick="showPopup('tecnologia')">Tecnologia</a>
+            <a href="#" onclick="showPopup('estrategia')">Estrategia</a>
+          </div>
+        </div>
+    </div>
+    
+    <div id="popup1" class="popup popup-left">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopups('popup1')">&times;</span>
+          <p id="popup-text1"></p>
+        </div>
+    </div>
+    
+    <div id="popup2" class="popup popup-right">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopups('popup2')">&times;</span>
+          <p id="popup-text2"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
