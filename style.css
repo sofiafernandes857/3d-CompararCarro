@@ -21,7 +21,7 @@ body {
 .dropdown-container {
     display: flex;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px; /* Espaço entre os botões */
 }
 
 .dropdown {
@@ -32,11 +32,16 @@ body {
 .dropbtn {
     background-color: #a43943;
     color: white;
-    padding: 16px;
+    padding: 0; /* Removido padding, usando altura fixa */
     font-size: 16px;
     border: none;
     cursor: pointer;
-    width: auto; 
+    width: 100%; /* Faz os botões ocuparem toda a largura do contêiner */
+    height: 50px; /* Altura fixa para todos os botões */
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura e altura */
+    display: flex; /* Flex para centralizar conteúdo */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
 }
 
 .dropdown-content {
@@ -111,21 +116,18 @@ body {
 /* Estilos específicos para dispositivos móveis */
 @media (max-width: 768px) {
     .dropdown-container {
-        flex-wrap: wrap; 
+        flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte */
     }
 
     .dropdown {
-        flex: 1; 
-        min-width: 120px; 
+        flex: 1; /* Faz os botões crescerem igualmente */
+        min-width: 120px; /* Define uma largura mínima para os botões */
     }
 
     .dropbtn {
-        padding: 12px; 
-        font-size: 14px;
-        width: 100%; 
-        box-sizing: border-box; 
-    }
-    .dropdown {
-        height: 50px; 
+        padding: 0; /* Remover padding, já que a altura é fixa */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        height: 50px; /* Altura fixa para todos os botões */
+        box-sizing: border-box; /* Inclui padding e border no cálculo de largura e altura */
     }
 }
