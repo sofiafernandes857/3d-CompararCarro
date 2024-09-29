@@ -21,7 +21,7 @@ body {
 .dropdown-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espaço entre os botões */
+    gap: 10px; 
 }
 
 .dropdown {
@@ -36,8 +36,7 @@ body {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    /* Largura padrão para desktops (não ocupa a linha inteira) */
-    width: auto; /* Os botões não ocupam toda a largura */
+    width: auto; 
 }
 
 .dropdown-content {
@@ -112,18 +111,21 @@ body {
 /* Estilos específicos para dispositivos móveis */
 @media (max-width: 768px) {
     .dropdown-container {
-        flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte */
+        flex-wrap: wrap; 
     }
 
     .dropdown {
-        flex: 1; /* Faz os botões crescerem igualmente */
-        min-width: 120px; /* Define uma largura mínima para os botões */
+        flex: 1; 
+        min-width: 120px; 
     }
 
     .dropbtn {
-        padding: 12px; /* Ajusta o padding para telas menores */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
-        width: 100%; /* Faz os botões ocuparem toda a largura do contêiner */
-        box-sizing: border-box; /* Inclui padding e border no cálculo de largura */
+        padding: 12px; 
+        font-size: 14px;
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    .dropdown {
+        height: 50px; 
     }
 }
