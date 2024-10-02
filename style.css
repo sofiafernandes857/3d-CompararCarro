@@ -1,4 +1,4 @@
-body {
+body { 
     margin: 0;
 }
 
@@ -18,10 +18,17 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Adição para o espectro de cores */
+.spectrum {
+    background: linear-gradient(to bottom, white, black);
+    height: 100vh; /* Ajusta a altura conforme necessário */
+    width: 100vw; /* Ajusta a largura conforme necessário */
+}
+
 .dropdown-container {
     display: flex;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px; /* Espaço entre os botões */
 }
 
 .dropdown {
@@ -32,16 +39,16 @@ body {
 .dropbtn {
     background-color: #a43943;
     color: white;
-    padding: 0; 
-    font-size: 16px;
+    padding: 0; /* Removido padding, usando altura fixa */
+    font-size: 18px; /* Aumenta o tamanho da fonte para desktop */
     border: none;
     cursor: pointer;
-    width: 100%; 
-    height: 50px; 
-    box-sizing: border-box; 
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
+    width: 100%; /* Faz os botões ocuparem toda a largura do contêiner */
+    height: 60px; /* Aumenta a altura dos botões para desktop */
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura e altura */
+    display: flex; /* Flex para centralizar conteúdo */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
 }
 
 .dropdown-content {
@@ -113,30 +120,65 @@ body {
     cursor: pointer;
 }
 
-
+/* Estilos específicos para dispositivos móveis */
 @media (max-width: 768px) {
     .dropdown-container {
-        flex-wrap: wrap; 
+        flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte */
     }
 
     .dropdown {
-        flex: 1; 
-        min-width: 120px; 
+        flex: 1; /* Faz os botões crescerem igualmente */
+        min-width: 120px; /* Define uma largura mínima para os botões */
     }
 
     .dropbtn {
-        padding: 0; 
-        font-size: 14px; 
-        height: 50px;
-        box-sizing: border-box; 
+        padding: 0; /* Remover padding, já que a altura é fixa */
+        font-size: 14px; /* Ajusta o tamanho da fonte para mobile */
+        height: 50px; /* Altura fixa para todos os botões */
+        box-sizing: border-box; /* Inclui padding e border no cálculo de largura e altura */
+    }
+
+    .popup {
+        width: 100%; /* Pop-ups ocupam toda a largura da tela em dispositivos móveis */
+        height: auto; /* Ajusta a altura automaticamente */
+        top: auto; /* Reseta a posição top */
+        overflow-y: auto; /* Adiciona scroll vertical se necessário */
+    }
+
+    .popup-left,
+    .popup-right {
+        left: 0;
+        right: 0;
+    }
+
+    .popup-left {
+        top: 0; /* Define a posição top para o primeiro pop-up */
+    }
+
+    .popup-right {
+        top: 50%; /* Define a posição top para o segundo pop-up, ajustando conforme necessário */
+    }
+
+    .popup-content {
+        margin: 5% auto; /* Menor margem para dispositivos móveis */
+        width: 90%; /* Largura maior para dispositivos móveis */
     }
 }
 
-
+/* Estilos específicos para tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
     .dropbtn {
-        height: 60px; 
-        font-size: 18px; 
-        padding: 10px; 
+        height: 60px; /* Aumenta a altura dos botões para tablets */
+        font-size: 18px; /* Aumenta o tamanho da fonte para tablets */
+        padding: 10px; /* Adiciona padding para melhorar o espaço interno */
+    }
+}
+
+/* Estilos específicos para desktop */
+@media (min-width: 1025px) {
+    .dropbtn {
+        height: 50px; /* Aumenta a altura dos botões para desktop */
+        font-size: 20px; /* Aumenta o tamanho da fonte para desktop */
+        padding: 12px; /* Adiciona padding para melhorar o espaço interno */
     }
 }
