@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Carregar o primeiro carro
-    gltfLoader.load('models/carro_cheio.glb', function(gltf) {
+    gltfLoader.load('models/carroFE.glb', function(gltf) {
         console.log('glTF do carro 1 carregado');
         carro1 = gltf.scene; 
         carro1.scale.set(0.1, 0.1, 0.1); // Ajustar a escala
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
         scene.add(carro1);
 
         // Carregar o segundo carro
-        gltfLoader.load('models/formula1_cheio.glb', function(gltf) {
+        gltfLoader.load('models/carroF1.glb', function(gltf) {
             console.log('glTF do carro 2 carregado');
             carro2 = gltf.scene; 
 
